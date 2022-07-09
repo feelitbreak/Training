@@ -4,6 +4,11 @@ namespace CountingArrayElements
 {
     public static class WhileMethods
     {
+        /// <summary>
+        /// Searches an array of strings for empty elements, and returns the number of occurrences of empty strings.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of empty strings.</returns>
         public static int GetEmptyStringCount(string[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -13,7 +18,6 @@ namespace CountingArrayElements
 
             int count = 0;
             int i = arrayToSearch.Length - 1;
-
             while (i >= 0)
             {
                 if (string.IsNullOrEmpty(arrayToSearch[i]))
@@ -27,6 +31,11 @@ namespace CountingArrayElements
             return count;
         }
 
+        /// <summary>
+        /// Searches an array of long integers for elements with minimum and maximum values, and returns the number of occurrences of long integers with minimum and maximum values.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of long integers with minimum and maximum values.</returns>
         public static int GetMinOrMaxLongCount(long[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -36,7 +45,6 @@ namespace CountingArrayElements
 
             int count = 0;
             int i = 0;
-
             while (i < arrayToSearch.Length)
             {
                 if (arrayToSearch[i] == long.MinValue || arrayToSearch[i] == long.MaxValue)
@@ -50,6 +58,11 @@ namespace CountingArrayElements
             return count;
         }
 
+        /// <summary>
+        /// Searches an array of objects for null elements, and returns the number of occurrences of null values.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of null values.</returns>
         public static int GetNullObjectCount(object[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -59,7 +72,6 @@ namespace CountingArrayElements
 
             int count = 0;
             int i = 0;
-
             while (i < arrayToSearch.Length)
             {
                 if (arrayToSearch[i] is null)
@@ -73,6 +85,11 @@ namespace CountingArrayElements
             return count;
         }
 
+        /// <summary>
+        /// Searches an array of strings for empty elements, and returns the number of occurrences of empty strings.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of empty strings.</returns>
         public static int GetEmptyStringCountRecursive(string[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -90,6 +107,11 @@ namespace CountingArrayElements
             return GetEmptyStringCountRecursive(newArrayToSearch) + currentIncrement;
         }
 
+        /// <summary>
+        /// Searches an array of long integers for elements with minimum and maximum values, and returns the number of occurrences of long integers with minimum and maximum values.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of long integers with minimum and maximum values.</returns>
         public static int GetMinOrMaxLongCountRecursive(long[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -108,6 +130,11 @@ namespace CountingArrayElements
             return GetMinOrMaxLongCountRecursive(newArrayToSearch) + currentIncrement;
         }
 
+        /// <summary>
+        /// Searches an array of objects for null elements, and returns the number of occurrences of null values.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of null values.</returns>
         public static int GetNullObjectCountRecursive(object[]? arrayToSearch)
         {
             if (arrayToSearch is null)

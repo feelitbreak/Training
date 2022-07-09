@@ -4,6 +4,11 @@ namespace CountingArrayElements
 {
     public static class DoWhileMethods
     {
+        /// <summary>
+        /// Searches an array of booleans for false elements, and returns the number of occurrences of false values.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of false values.</returns>
         public static int GetFalseValueCount(bool[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -33,6 +38,11 @@ namespace CountingArrayElements
             return count;
         }
 
+        /// <summary>
+        /// Searches an array of decimal floating-point numbers for zero elements, and returns the number of occurrences of zero values.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of zero values.</returns>
         public static int GetZeroDecimalCount(decimal[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -80,6 +90,11 @@ namespace CountingArrayElements
             return count1 + count2;
         }
 
+        /// <summary>
+        /// Searches an array of double-precision floating-point numbers for elements that can be rounded to even, and returns the number of occurrences of numbers that can be rounded to even.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of numbers that can be rounded to even.</returns>
         public static int GetRoundedToEvenCount(double[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -117,6 +132,11 @@ namespace CountingArrayElements
             return ProcessArray(arrayToSearch[..middleIndex]) + ProcessArray(arrayToSearch[middleIndex..]);
         }
 
+        /// <summary>
+        /// Searches an array of booleans for false elements, and returns the number of occurrences of false values.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of false values.</returns>
         public static int GetFalseValueCountRecursive(bool[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -127,6 +147,11 @@ namespace CountingArrayElements
             return GetFalseValueCountRecursive(arrayToSearch, arrayToSearch.Length, 0);
         }
 
+        /// <summary>
+        /// Searches an array of decimal floating-point numbers for zero elements, and returns the number of occurrences of zero values.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of zero values.</returns>
         public static int GetZeroDecimalCountRecursive(decimal[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -149,6 +174,11 @@ namespace CountingArrayElements
             return leftArrayCount + rightArrayCount;
         }
 
+        /// <summary>
+        /// Searches an array of double-precision floating-point numbers for elements that can be rounded to even, and returns the number of occurrences of numbers that can be rounded to even.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of numbers that can be rounded to even.</returns>
         public static int GetRoundedToEvenCountRecursive(double[]? arrayToSearch)
         {
             if (arrayToSearch is null)

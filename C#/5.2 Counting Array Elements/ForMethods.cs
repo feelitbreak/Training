@@ -4,6 +4,11 @@ namespace CountingArrayElements
 {
     public static class ForMethods
     {
+        /// <summary>
+        /// Searches an array of integers for negative elements, and returns the number of occurrences of negative integers.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of negative integers.</returns>
         public static int GetNegativeIntegerCount(int[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -23,6 +28,11 @@ namespace CountingArrayElements
             return count;
         }
 
+        /// <summary>
+        /// Searches an array of single-precision floating-point numbers for even elements, and returns the number of occurrences of even numbers.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of even numbers.</returns>
         public static int GetEvenNumberCount(float[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -42,6 +52,11 @@ namespace CountingArrayElements
             return count;
         }
 
+        /// <summary>
+        /// Searches an array of bytes for elements with enabled bits in high nibble, and returns the number of occurrences of bytes with enabled bits in high nibble.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of bytes with enabled bits in high nibble.</returns>
         public static int GetByteWithBitsInHighNibbleCount(byte[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -61,6 +76,11 @@ namespace CountingArrayElements
             return count;
         }
 
+        /// <summary>
+        /// Searches an array of integers for negative elements, and returns the number of occurrences of negative integers.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of negative integers.</returns>
         public static int GetNegativeIntegerCountRecursive(int[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -71,6 +91,11 @@ namespace CountingArrayElements
             return GetNegativeIntegerCountRecursive(arrayToSearch, 0);
         }
 
+        /// <summary>
+        /// Searches an array of single-precision floating-point numbers for even elements, and returns the number of occurrences of even numbers.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of even numbers.</returns>
         public static int GetEvenNumberCountRecursive(float[]? arrayToSearch)
         {
             if (arrayToSearch is null)
@@ -87,6 +112,11 @@ namespace CountingArrayElements
             return GetEvenNumberCountRecursive(arrayToSearch[1..]) + currentIncrement;
         }
 
+        /// <summary>
+        /// Searches an array of bytes for elements with enabled bits in high nibble, and returns the number of occurrences of bytes with enabled bits in high nibble.
+        /// </summary>
+        /// <param name="arrayToSearch">An <see cref="Array"/> to search.</param>
+        /// <returns>The number of occurrences of bytes with enabled bits in high nibble.</returns>
         public static int GetByteWithBitsInHighNibbleCountRecursive(byte[]? arrayToSearch)
         {
             if (arrayToSearch is null)
