@@ -208,13 +208,5 @@ namespace JaggedArrays
 
             return max;
         }
-
-        private static void ReverseArray(this int[][] source)
-        {
-            for (int i = 0; i < source.Length / 2; i++)
-            {
-                (source[i], source[^(i + 1)]) = (source[^(i + 1)], source[i]);
-            }
-        }
     }
 }
