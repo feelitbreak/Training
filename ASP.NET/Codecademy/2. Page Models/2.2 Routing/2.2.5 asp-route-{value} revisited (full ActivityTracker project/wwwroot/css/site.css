@@ -1,0 +1,176 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+/* Custom CSS
+-------------------------------------------------- */
+
+footer {
+    color: #979797;
+}
+
+a,
+h1#home-page {
+    color: #3EAED5;
+}
+
+a#go-to-tracker {
+    background-color: #3EAED5;
+}
+
+a.day-week-links {
+    white-space: nowrap;
+}
+
+a.active-day {
+    text-decoration: underline solid;
+}
+
+div.circle-col {
+    position: relative;
+}
+
+/* Source for progress circles: https://css-tricks.com/building-progress-ring-quickly/ */
+
+.progress-ring__circle {
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+}
+
+/* 
+circumference = 2 * pi * radius 
+circumference = 2 * pi * 80
+circumference = 502.64
+*/
+.progress-ring__circle.foreground {
+    stroke-dasharray: 503 503;
+    stroke-dashoffset: 503;
+}
+
+/*
+stroke-dashoffset = circumference * (1 - percentProgress)
+e.g. if circumference is 500 and progress is 25%, stroke-dashoffset is 375
+*/
+.progress-ring__circle.full {
+    stroke-dashoffset: 0;
+}
+
+.progress-ring__circle.one-quarter {
+    stroke-dashoffset: 377.25;
+}
+
+.progress-ring__circle.two-quarter {
+    stroke-dashoffset: 251.5;
+}
+
+.progress-ring__circle.three-quarter {
+    stroke-dashoffset: 125.75;
+}
+
+div.progress-contents {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+img.activity-icon {
+    width: 45px;
+}
+
+span.activity-number {
+    font-size: 1.5rem;
+}
+
+svg#left-arrow {
+    transform-origin: 50% 50%;
+    transform: rotate(180deg);
+}
+
+a#current-link {
+    text-align: center;
+    color: black;
+}
+
+a#current-link span {
+    display: block;
+}
+
+a#current-link span.day {
+    font-size: 1.5rem;
+}
+
+a#current-link span.date {
+    font-size: 1rem;
+}

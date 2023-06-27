@@ -1,0 +1,28 @@
+﻿@model ProgressCirclePartialModel
+
+<div class="progress-circle text-center">
+    <svg class="progress-ring test" width="200" height="200">
+        <circle class="progress-ring__circle background"
+                stroke=@Model.BackgroundStroke
+                stroke-width="15"
+                fill="transparent"
+                r="80"
+                cx="100"
+                cy="100" />
+        <circle class="progress-ring__circle foreground"
+                stroke=@Model.ForegroundStroke
+                stroke-width="15"
+                stroke-linecap="round"
+                fill="transparent"
+                r="80"
+                cx="100"
+                cy="100">
+            <animate attributeName="stroke-dashoffset" from="503" to=@(503 * (1 - Model.PercentProgress)) dur="1s" repeatCount="1" fill="freeze" />
+        </circle>
+    </svg>
+</div>
+<div class="progress-contents d-flex flex-column align-items-center justify-content-center">
+    <img class="activity-icon" src=@Model.IconUrl />
+    <span class="activity-number">@(String.Format("{0:n0}", Model.DisplayNumber))</span>
+    <span class="activity-unit">@Model.Unit</span>
+</div>
