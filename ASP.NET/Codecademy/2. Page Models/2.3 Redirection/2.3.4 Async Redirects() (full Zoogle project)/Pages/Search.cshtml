@@ -1,0 +1,59 @@
+﻿@page
+@model SearchModel
+
+<div class="text-center">
+    <h1 id="zoogle-title">Zoogle</h1>
+    <p>Where animals always feel lucky</p>
+</div>
+
+<div>
+    <form class="input-group mb-4" id="search-bar">
+        <div class="input-group-prepend bg-transparent">
+            <span id="search-icon" class="input-group-text bg-transparent" aria-hidden="true">
+                <img class="magnify-icon" src="https://content.codecademy.com/courses/asp-dot-net/animal-icons/magnify-blue-64-64.png" />
+            </span>
+        </div>
+
+        <input id="search-text-input" type="text" asp-for="SearchString" class="form-control" placeholder="Enter an animal's common name" aria-label="Animal common name" aria-describedby="button-addon2">
+
+        <div class="input-group-append">
+            <input id="search-button-input" class="btn btn-outline-secondary" type="submit" value="Search">
+        </div>
+    </form>
+</div>
+
+
+<div class="card">
+    @if (Model.FoundAnimal is null)
+    {
+        <div id="no-results" class="card-header">No results found</div>
+    }
+    else
+    {
+        <div class="card-header pl-1">
+            <h2 class="mb-0">
+                <button class="btn btn-link font-weight-bold animal-header" type="button">
+                    <img class="animal-icon mr-2" src=@Model.FoundAnimal.ImageUrl />@Model.FoundAnimal.CommonName
+                </button>
+            </h2>
+        </div>
+
+        <div>
+            <div class="card-body">
+                <h5 class="card-title">Scientific Name</h5>
+                <p class="card-text">@Model.FoundAnimal.Species</p>
+                <h5 class="card-title">Description</h5>
+                <p class="card-text">@Model.FoundAnimal.Description</p>
+                <h5 class="card-title">Habitat</h5>
+                <ul>
+                    @foreach (string habitat in Model.FoundAnimal.Habitats)
+                    {
+                        <li>@habitat</li>
+                    }
+                </ul>
+                <h5 class="card-title">Size</h5>
+                <p class="card-text">Height: @Model.FoundAnimal.Height cm<br />Weight: @Model.FoundAnimal.Weight kg</p>
+            </div>
+        </div>
+    }
+</div>

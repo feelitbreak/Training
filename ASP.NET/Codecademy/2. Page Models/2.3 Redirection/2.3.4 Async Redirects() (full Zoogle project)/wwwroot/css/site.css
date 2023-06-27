@@ -1,0 +1,174 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    font-size: 1.5rem;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+/* html {
+  font-size: 14px;
+} */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+/* Custom CSS
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+div#body-container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+h1,
+a.navbar-brand {
+    color: #53A1F0;
+}
+
+h1#zoogle-title {
+    font-weight: 400;
+}
+
+div.card-header {
+    background-color: rgba(255, 255, 255, 0);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.card-title {
+    font-size: 1rem;
+}
+
+p.card-text,
+.card-body li,
+div#no-results {
+    color: #5B5B5B;
+}
+
+button.animal-header {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: black;
+    display: block;
+    text-align: left;
+}
+
+    button.animal-header img.animal-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+img.plus-icon,
+img.minus-icon {
+    width: 12px;
+}
+
+img.magnify-icon,
+svg.magnify-icon {
+    width: 1rem;
+    vertical-align: baseline;
+}
+
+button.animal-header img.plus-icon,
+button.animal-header img.minus-icon,
+button.animal-header svg.plus-icon,
+button.animal-header svg.minus-icon {
+    position: absolute;
+    top: 22px;
+    right: 15px;
+}
+
+img.icon-visible,
+svg.icon-visible {
+    visibility: visible;
+}
+
+img.icon-hidden,
+svg.icon-hidden {
+    visibility: hidden;
+}
+
+#search-icon,
+#search-text-input,
+#search-button-input {
+    border-color: #479EF0;
+}
+
+#search-icon {
+    border-right: none;
+    border-bottom-left-radius: 50rem;
+    border-top-left-radius: 50rem;
+}
+
+#search-text-input {
+    border-left: none;
+}
+
+#search-button-input {
+    border-bottom-right-radius: 50rem;
+    border-top-right-radius: 50rem;
+    background: #479EF0;
+    color: white;
+}
