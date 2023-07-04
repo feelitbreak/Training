@@ -28,10 +28,10 @@ namespace RazorCountry.Pages.Countries
         [BindProperty(SupportsGet = true)]
         public string SortField { get; set; } = "Name";
 
-        public SelectList Continents { get; set; }
+        public SelectList? Continents { get; set; }
 
         [BindProperty(SupportsGet = true)]
-        public string SelectedContinent { get; set; }
+        public string? SelectedContinent { get; set; }
 
         public async Task OnGetAsync()
         {
@@ -74,11 +74,11 @@ namespace RazorCountry.Pages.Countries
                 return NotFound();
             }
 
-            Country? Country = await _context.Countries.FindAsync(id);
+            Country? country = await _context.Countries.FindAsync(id);
 
-            if (Country is not null)
+            if (country is not null)
             {
-                _context.Countries.Remove(Country);
+                _context.Countries.Remove(country);
             }
 
             await _context.SaveChangesAsync();
