@@ -1,0 +1,54 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<p><em>In the data store:</em></p>
+<ol>
+    @foreach (var item in Model.Items!)
+    {
+        <li>"@item"</li>
+    }
+</ol>
+
+<p><em>In the database:</em></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Towers![0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Towers![0].Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Towers![0].Height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Towers![0].Country)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Towers!)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Height)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
